@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    >
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:theme="@style/LoginTheme"
+        android:layout_centerInParent="true"
+        >
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Welcome"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/color_hint"
+            android:layout_marginTop="32dp"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <AutoCompleteTextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/color_hint"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            android:layout_marginTop="4dp"
+            >
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="6"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="111111"
+                android:textColor="@color/white" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/color_hint"
+            app:hintAnimationEnabled="true"
+            android:layout_marginTop="4dp"
+            app:hintEnabled="true">
+
+            <EditText
+                android:id="@+id/regist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/white" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ToggleButton
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_gravity="right"
+            android:background="@color/colorAccent"
+            android:checked="true"
+            android:textColor="@color/colorPrimary"
+            android:textOff="学生"
+            android:textOn="教师" />
+
+        <Button
+            android:id="@+id/email_sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/login_bt"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="@string/action_regist"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</RelativeLayout>
