@@ -8,17 +8,16 @@ Login
 
 HomeFragment ：无作用
 Teacher页面：
-	TeacherClassFragment 课程
-	InfoFragment 提醒
+	TeacherClassFragment 课程	-->添加课程 （AddClassActivity）
+	InfoFragment 提醒	-->教师信息（TeachersignActivity）
 学生页面：
-	ClassFragment 课程
-	StdinfoFragment 提醒
+	ClassFragment 课程	-->选择课程 （SelectClassActivity）
+	StdinfoFragment 提醒	-->学生签到（null  load()）
 
 QueryClassTeacher
  参数：lid  pwd   operation= TeacherQueryClass  Params= null
 DoCheckNetWork
  参数：lid  pwd   operation= none  Params= null
-
 
 AddProject
  参数：lid  pwd   operation= addproject Params= {projectname ,subtitle, starttime, endtime, dayofweek, west, east, south, north}
