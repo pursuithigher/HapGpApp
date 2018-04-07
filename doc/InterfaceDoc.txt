@@ -1,0 +1,36 @@
+Regist
+ 参数：lid  pwd   operation= regist Params= { name=？ teacher/temp = true} 是否是教师
+ 返回参数 excuteResult="Success" 返回登录
+
+Login
+ 参数：lid  pwd   operation= Login Params= null
+ 返回参数：userLoginToken extResult={Name， Role}  存放在MetaData静态类中
+
+HomeFragment ：无作用
+Teacher页面：
+	TeacherClassFragment 课程
+	InfoFragment 提醒
+学生页面：
+	ClassFragment 课程
+	StdinfoFragment 提醒
+
+QueryClassTeacher
+ 参数：lid  pwd   operation= TeacherQueryClass  Params= null
+DoCheckNetWork
+ 参数：lid  pwd   operation= none  Params= null
+
+
+AddProject
+ 参数：lid  pwd   operation= addproject Params= {projectname ,subtitle, starttime, endtime, dayofweek, west, east, south, north}
+GetClass
+ 参数：lid  pwd   operation= GetClass Params= null
+SignIn
+ 参数：lid  pwd   operation= SignIn Params= {x,y}
+QuerySignIn
+ 参数：lid  pwd   operation= QuerySignIn Params= null
+TeacherSignIn
+ 参数：lid  pwd   operation= TeacherSignIn Params= {names }
+SelectClass
+ 参数：lid  pwd   operation= SelectClass Params= {projectname}
+QueryClass
+ 参数：lid  pwd   operation= QueryClass Params= {projectname}
