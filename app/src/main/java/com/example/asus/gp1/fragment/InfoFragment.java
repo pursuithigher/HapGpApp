@@ -28,7 +28,7 @@ public class InfoFragment extends Fragment implements TeacherInfoTask.onLoadCall
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_info, container, false);
-        FloatingActionButton bt2=(FloatingActionButton)view.findViewById(R.id.floatingActionButton1);
+        FloatingActionButton bt2=(FloatingActionButton)view.findViewById(R.id.floatingActionButton);
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

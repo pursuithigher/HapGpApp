@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         ColorStateList csl = new ColorStateList(states, colors);
         navigation.setItemTextColor(csl);
         navigation.setItemIconTintList(csl);
-        mviewpager = findViewById(R.id.viewpager);
+        mviewpager = (ViewPager) findViewById(R.id.viewpager);
         initData();
     }
 

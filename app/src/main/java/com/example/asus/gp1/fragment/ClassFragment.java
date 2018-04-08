@@ -41,7 +41,7 @@ public class ClassFragment extends Fragment implements StudentClassTask.onLoadCa
 
     private void initView(View view) {
         listView = (ListView) view.findViewById(R.id.std_listview);
-        FloatingActionButton bt2 = (FloatingActionButton) view.findViewById(R.id.floatingActionButton2);
+        FloatingActionButton bt2 = (FloatingActionButton) view.findViewById(R.id.floatingActionButton);
         bt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

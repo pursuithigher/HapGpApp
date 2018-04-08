@@ -33,7 +33,6 @@ import com.example.asus.gp1.helper.RequestUtil;
 import com.example.asus.gp1.task.UserLoginTask;
 import com.example.asus.gp1.utils.DialogHelper;
 import com.example.asus.gp1.utils.ProfileQuery;
-import com.google.android.gms.plus.PlusOneButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -75,8 +74,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailSignInButton.setOnClickListener(this);
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-        loginIp = findViewById(R.id.login_et1);
-        loginPort = findViewById(R.id.login_et2);
+        loginIp = (EditText) findViewById(R.id.login_et1);
+        loginPort = (EditText) findViewById(R.id.login_et2);
         mPasswordView = (EditText) findViewById(R.id.password);
         signIn = findViewById(R.id.email_signin);
         signIn.setOnClickListener(this);
