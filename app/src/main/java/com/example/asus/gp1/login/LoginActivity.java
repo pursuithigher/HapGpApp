@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private boolean isNetWorkOpen=true;
 
-    private boolean SkipLogin = true;
+    private boolean SkipLogin = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,6 +114,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         MetaData.Role=(String)ext.get("Role");
         Intent in = new Intent(this, MainActivity.class);
         startActivity( in );
+        finish();
     }
 
     @Override
@@ -125,6 +126,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         if(SkipLogin) {
             Intent in = new Intent(this, MainActivity.class);
             startActivity( in );
+            finish();
         }
     }
 

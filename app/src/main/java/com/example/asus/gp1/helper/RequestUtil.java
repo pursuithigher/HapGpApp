@@ -218,6 +218,19 @@ public class RequestUtil {
 
     }
 
+    public static Bundle SelectClass(final Map m) {
+        String str = "{\t\n" +
+                "    \"lid\": \"" + m.get("lid") + "\",\n" +
+                "    \"pwd\": \"" + m.get("pwd") + "\",\n" +
+                "    \"operation\": \"SelectClass\",\n" +
+                "    \"Params\": {\n" +
+                "        \"projectname\": \"" + m.get("projectname") + "\"\n" +
+                "    }\n" +
+                "}";
+        return post(str);
+
+    }
+
     //获取指定课程信息
     public static void QueryClass(final Map m, final Handler handler) throws IOException {
         String str = "{\t\n" +

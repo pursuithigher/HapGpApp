@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import com.example.asus.gp1.helper.RequestUtil;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -25,7 +27,7 @@ public class SelectClassTask extends AsyncTask<Void, Void, Bundle>{
 
     @Override
     protected Bundle doInBackground(Void... voids) {
-        return null;
+        return RequestUtil.SelectClass(maps);
     }
 
     @Override

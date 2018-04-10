@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -39,8 +40,8 @@ public class StdinfoFragment extends Fragment implements AddClassTask.AddClassCa
     private double latitude = 0.0;
     private double longitude = 0.0;
 
-
     private OnFragmentInteractionListener mListener;
+    private ViewGroup viewContainer;
 
     @Override
     public void onAttach(Context context) {
@@ -56,7 +57,8 @@ public class StdinfoFragment extends Fragment implements AddClassTask.AddClassCa
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment_stdinfo, container, false);
+        View view = inflater.inflate(R.layout.fragment_stdinfo, container, false);
+        viewContainer = view.findViewById(R.id.coordinate_container);
         Button bt = (Button) view.findViewById(R.id.bt4);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,9 +98,11 @@ public class StdinfoFragment extends Fragment implements AddClassTask.AddClassCa
         }
     };
 
-    @SuppressLint("MissingPermission")
     private void getLocation() {
-        @SuppressLint("MissingPermission") Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         if (location != null) {
             latitude = location.getLatitude();
             longitude = location.getLongitude();
@@ -186,5 +190,11 @@ public class StdinfoFragment extends Fragment implements AddClassTask.AddClassCa
         builder.setMessage(R.string.request_failed) ;
         builder.setPositiveButton("是" ,  null );
         builder.show();
+//        Snackbar.make(viewContainer, "签到成功", Snackbar.LENGTH_LONG).setAction("OK", new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        }).show();
     }
 }
